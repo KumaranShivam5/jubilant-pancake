@@ -26,19 +26,20 @@ SECRET_KEY = 'django-insecure--6as*l3r_@^28n_+gqu(o*)blg#5a4ufy5%eqr#=_6c@+e(9&6
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1' , 'localhost', 'www.pinakarifleclub.com', 'www.pinakarifleclub.in', 'http://0.0.0.0:8081', '0.0.0.0', 
+    '127.0.0.1' , 'localhost', 'www.pinakarifleclub.com', 'www.pinakarifleclub.in', 'http://0.0.0.0:8081', '0.0.0.0',
     'https://www.pinakarifleclub.com'
     'https://www.pinakarifleclub.in',
     'https://pinakarifleclub.com',
-    'https://pinakarifleclub.com', 
+    'https://pinakarifleclub.com',
     'http://www.pinakarifleclub.com'
     'http://www.pinakarifleclub.in',
     'http://pinakarifleclub.com',
-    'http://pinakarifleclub.com', 
-    "pinakarifleclub.com", 
-    "pinakarifleclub.in", 
+    'http://pinakarifleclub.com',
+    "pinakarifleclub.com",
+    "pinakarifleclub.in",
     "www.pinakarifleclub.com",
     "www.pinakarifleclub.in",
+    "pinaka.pythonanywhere.com"
 ]
 
 
@@ -52,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
-    'rest_framework', 
+    'rest_framework',
     'rest_framework.authtoken',
     'djoser'
 ]
@@ -75,19 +76,19 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:8010",
     "http://127.0.0.1:9000" ,
     'http://127.0.0.1' ,
-    'http://0.0.0.0:8081', 
-    
+    'http://0.0.0.0:8081',
+
     'http://www.pinakarifleclub.com'
     'http://www.pinakarifleclub.in',
     'http://pinakarifleclub.com',
-    'http://pinakarifleclub.com', 
+    'http://pinakarifleclub.com',
 
     'https://www.pinakarifleclub.com'
     'https://www.pinakarifleclub.in',
     'https://pinakarifleclub.com',
-    'https://pinakarifleclub.com', 
-    "pinakarifleclub.com", 
-    "pinakarifleclub.in", 
+    'https://pinakarifleclub.com',
+    "pinakarifleclub.com",
+    "pinakarifleclub.in",
     "www.pinakarifleclub.com",
     "www.pinakarifleclub.in",
 ]
@@ -200,12 +201,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 
-import os 
+import os
 MEDIA_ROOT = BASE_DIR / 'media_files/'
-STATIC_ROOT = 'static_files/'
+STATIC_ROOT = '/home/pinaka/jubilant-pancake/static_files/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
