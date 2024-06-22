@@ -56,3 +56,11 @@ class contactMsg(models.Model):
     reply_pending = models.BooleanField(default=True)
     def __str__(self) -> str:
         return self.name
+    
+class galleryImages(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.FileField(null=True, blank=True, upload_to='gallery_photo')
+    show_on_homepage = models.BooleanField(default=True, null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    def __str__(self) -> str:
+        return self.name

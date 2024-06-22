@@ -44,3 +44,17 @@ def sendMsg(request):
         return Response('message sent succesfully')
     else:
         return Response('error in sent data')
+
+
+@api_view(['GET'])
+def getGalleryAll(request):
+    glList = galleryImages.objects.all()
+    glList = serializer.gallerySerializer(glList, many=True)
+    return Response(glList.data)
+
+
+@api_view(['GET'])
+def getGalleryHome(request):
+    glList = galleryImages.objects.filter(show_on_homepage=True)
+    glList = serializer.gallerySerializer(glList, many=True)
+    return Response(glList.data)

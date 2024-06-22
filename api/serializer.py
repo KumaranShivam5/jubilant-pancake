@@ -33,3 +33,8 @@ class newsSerializer(serializers.ModelSerializer):
     class Meta:
         model = newsAndHighlight
         fields = '__all__'
+
+class gallerySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = galleryImages
+        fields = '__all__'

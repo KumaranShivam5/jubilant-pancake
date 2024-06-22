@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from api.models import memberProfile, category, newsAndHighlight,contactMsg
+from api.models import memberProfile, category, newsAndHighlight,contactMsg , galleryImages
 
 class memberAdmin(admin.ModelAdmin):
     list_filter = [
@@ -18,6 +18,7 @@ admin.site.register(memberProfile, memberAdmin)
 admin.site.register(category)
 admin.site.register(newsAndHighlight)
 admin.site.register(contactMsg)
+admin.site.register(galleryImages)
 
 
 
